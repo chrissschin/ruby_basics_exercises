@@ -16,7 +16,7 @@ without the method invocation it returned nil
 **break** is a method
 
 ## Large Numbers
-###### Using the ruby documentation, determine how you can write large numbers in a way that makes them easier to read.
+###### Q: Using the ruby documentation, determine how you can write large numbers in a way that makes them easier to read.
 
 They are under literals.rdoc 
 To easily understand large numbers we can use underscores such as : 1_932_222
@@ -33,7 +33,7 @@ To easily understand large numbers we can use underscores such as : 1_932_222
 - Procs
 
 ## Symbol Syntax
-###### Using the ruby documentation, determine how you would write a Symbol that represents your name. We aren't looking for a String; we want a Symbol, which is one of ruby's datatypes.
+###### Q: Using the ruby documentation, determine how you would write a Symbol that represents your name. We aren't looking for a String; we want a Symbol, which is one of ruby's datatypes.
 
 
 
