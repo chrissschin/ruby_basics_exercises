@@ -37,8 +37,9 @@ To easily understand large numbers we can use underscores such as : 1_932_222
 
 found under literals.rdoc
 
+```ruby
 :Christian 
-
+```
 what is a symbol? (note for self)
 - object (values) with names
 
@@ -53,7 +54,7 @@ example symbol table :
 * points to numbers are random
 
 | name          | id            | points to  |
-| ------------- |:-------------:| -----:|
+| ------------- |-------------| -----|
 | :x             | 23452         | 2827381|
 | :y             | 234523        |  101   |
 | :z             | 32452345      |   101  |
@@ -72,21 +73,27 @@ if you look at object ids. they are different. same in string textual way not in
 "x" != "x"
 
 good quote:
-"if the **textual content** of the object is important, use a String."
-"if the **identity** of the object is important, use a Symbol."
+>"if the **textual content** of the object is important, use a String."
+>"if the **identity** of the object is important, use a Symbol."
 
 ex:
+
 "hello".object_id
+
 will output 70141660837860 then a different id everytime
 
 :hello.object_id
+
 will output the same id everytime it's called
 
 **so:**
+
 person = { 'name' => 'chris', 'age' => 2}
+
 if person2 was made with the same keys then a new object id is made which will take up memory
 
 person = { :name => 'chris', :age => 2}
+
 if person2 was made then the symbol will not be created again.
 
 
