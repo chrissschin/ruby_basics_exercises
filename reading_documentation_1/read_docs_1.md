@@ -97,5 +97,28 @@ person = { :name => 'chris', :age => 2}
 if person2 was made then the symbol will not be created again.
 
 
+## Default Arguments in the Middle
+
+###### Consider the following method and a call to that method:
+
+```ruby
+def my_method(a, b = 2, c = 3, d)
+  p [a, b, c, d]
+end
+
+my_method(4, 5, 6)
+```
+###### Use the ruby documentation to determine what this code will print.
+
+found in calling_methods.rdoc
+
+my_method(4,5,6) output is [4,5,3,6]. c assumes default because its assigned 3 so the 6 gets assigned to d
+
+if my_method(4,5) output is [4,2,3,5]
+
+
+
+
+
 
 
