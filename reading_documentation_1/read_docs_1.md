@@ -35,6 +35,60 @@ To easily understand large numbers we can use underscores such as : 1_932_222
 ## Symbol Syntax
 ###### Q: Using the ruby documentation, determine how you would write a Symbol that represents your name. We aren't looking for a String; we want a Symbol, which is one of ruby's datatypes.
 
+found under literals.rdoc
+
+:Christian 
+
+what is a symbol? (note for self)
+- object (values) with names
+
+```ruby
+x = "hello"
+y = 50
+z = 50
+a = x
+b = "hello"
+```
+example symbol table :
+* points to numbers are random
+
+| name          | id            | points to  |
+| ------------- |:-------------:| -----:|
+| :x             | 23452         | 2827381|
+| :y             | 234523        |  101   |
+| :z             | 32452345      |   101  |
+| :a             | 134513        | 2827381|
+| :b             | 4412344        | 9572732 |
+
+- note that vars x and a point to the same string object
+- y and z also point to the same object but different id
+- b is a whole new string object even if its same text
+- lets say a append ", world". NOW x will = hello, world because the objects are the same. which is the 2827381
+
+this will be the same
+:x == :x
+
+if you look at object ids. they are different. same in string textual way not in objects
+"x" != "x"
+
+good quote:
+"if the **textual content** of the object is important, use a String."
+"if the **identity** of the object is important, use a Symbol."
+
+ex:
+"hello".object_id
+will output 70141660837860 then a different id everytime
+
+:hello.object_id
+will output the same id everytime it's called
+
+**so:**
+person = { 'name' => 'chris', 'age' => 2}
+if person2 was made with the same keys then a new object id is made which will take up memory
+
+person = { :name => 'chris', :age => 2}
+if person2 was made then the symbol will not be created again.
+
 
 
 
