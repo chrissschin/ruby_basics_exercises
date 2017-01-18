@@ -119,6 +119,21 @@ if my_method(4,5) output is [4,2,3,5]
 
 
 
+## String Class
+
+###### Lets move on now to the documentation you will use most often; the core API section on Classes and Modules. All of these are listed under Classes on the Core API page.
+
+###### Locate and open the class documentation for the String class.
+
+Located in core API, go to modules_and_classes.rdoc
+
+then find string under class index sidebar
+
+- sidenote: String#size or Array#size, Range::new or Hash::new
+- means that the named method is a memebr of the specified class or module.
+
+
+
 
 
 
