@@ -60,7 +60,68 @@ puts s.split(',', 2).inspect
 # ["abc def ghi", "jkl mno pqr,stu vwx yz"]
 
 puts v.split(',', 3).inspect
+# limit 3 times
 ```
 
 
+## Optional Arguments Redux
+###### Assume you have the following code:
 
+```ruby
+require 'date'
+
+puts Date.new
+puts Date.new(2016)
+puts Date.new(2016, 5)
+puts Date.new(2016, 5, 13)
+```
+###### Q: What will each of the 4 puts statements print?
+
+```ruby
+require 'date'
+
+puts Date.new
+# -4712-01-01
+# -4712 BC. Julian date
+puts Date.new(2016)
+# 2016-01-01
+
+puts Date.new(2016, 5)
+# 2016-05-01
+
+puts Date.new(2016, 5, 13)
+# 2016-05-13
+
+```
+
+## Mandatory Blocks
+###### The Array#bsearch method is used to search ordered Arrays more quickly than #find and #select can. Assume you have the following code:
+
+```ruby
+a = [1, 4, 8, 11, 15, 19]
+```
+###### How would you search this Array to find the first element whose value exceeds 8?
+
+```ruby
+a = [1, 4, 8, 11, 15, 19]
+
+a.bsearch { |el| el >= 7 }
+# will find the nearest value and use that
+
+```
+
+## Multiple Signatures
+###### Q: What do each of these puts statements output?
+
+```ruby
+a = %w(a b c d e)
+puts a.fetch(7)
+# looking for index 7 which is out of bounds, throws an error
+
+puts a.fetch(7, 'beats me')
+# "beats me" is a default parameter which prevents an error from occuring
+
+puts a.fetch(7) { |index| index**2 }
+# using the block prevents an error. 7 is out of bounds so it uses the block instead
+# prints out 49
+```
