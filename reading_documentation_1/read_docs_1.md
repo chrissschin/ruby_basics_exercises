@@ -141,6 +141,30 @@ then find string under class index sidebar
 
 
 
+## Class and Instance Methods
+
+###### Locate the ruby documentation for methods File::path and File#path. How are they different?
+
+found in the core api. File::path is a class method. File#path is an instance method.
+
+Class methods are called on the class
+
+```ruby
+puts File.path('bin')
+```
+instance methods are called on the objects
+
+```ruby
+chris = Person.new
+puts chris.say_hello
+```
+
+
+
+
+
+
+
 
 
 
