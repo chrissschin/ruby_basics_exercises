@@ -125,3 +125,33 @@ puts a.fetch(7) { |index| index**2 }
 # using the block prevents an error. 7 is out of bounds so it uses the block instead
 # prints out 49
 ```
+
+## Included Modules
+
+###### Use irb to run the following code:
+###### Q: Find the documentation for the #min method and modify the above program to print the two smallest values in the Array.
+
+```ruby
+a = [5, 9, 3, 11]
+puts a.min()
+
+puts a.min(2)
+# outputs two smallest
+
+# min is found in the Enumberable module. used to iterate through collections like array, hash, and range
+```
+
+## Down the Rabbit Hole
+
+###### Sometimes, the documentation is going to leave you scratching your head.
+
+###### In a very early assignment at Launch School, you are tasked with writing a program that loads some text messages from a YAML file. We do this with YAML::load_file:
+
+```ruby
+require 'yaml'
+MESSAGES = YAML.load_file('calculator_messages.yml')
+```
+
+found here http://ruby-doc.org/stdlib-2.4.0/libdoc/psych/rdoc/Psych.html#method-c-load_file
+
+YAML is another way to use data. 
