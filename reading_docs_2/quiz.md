@@ -126,6 +126,8 @@ puts a.fetch(7) { |index| index**2 }
 # prints out 49
 ```
 
+
+
 ## Included Modules
 
 ###### Use irb to run the following code:
@@ -155,3 +157,17 @@ MESSAGES = YAML.load_file('calculator_messages.yml')
 found here http://ruby-doc.org/stdlib-2.4.0/libdoc/psych/rdoc/Psych.html#method-c-load_file
 
 YAML is another way to use data. 
+
+
+##Keyword Arguments
+###### What does this code print?
+
+```ruby
+5.step(to: 10, by: 3) { |value| puts value }
+#step is located in the Numeric class documentation
+
+# runs a loop that will print 5 then 8
+# start at 5 limit at 10 but iterate up 3 
+# only prints 5 8 because 11 is out of bounds.
+```
+
