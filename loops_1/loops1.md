@@ -181,10 +181,36 @@ end
 
 ## That's Odd
 
-###### Q: The code below shows an example of a for loop. Modify the code so that it only outputs i if i is an odd numbe
+###### Q: The code below shows an example of a for loop. Modify the code so that it only outputs i if i is an odd number
 ```ruby
+
+for i in 1..100
+  puts i
+end
+
+for i in 1..100
+  puts i if i % 2 != 0
+end
+
+# or we can use a method to find the odd // also an even for this too. #even?
+
+for i in 1..100
+  puts i if i.odd?
+end
+
 ```
+## Greet Your Friends
+###### Q: Your friends just showed up! Given the following array of names, use a for loop to greet each friend individually.
+
 ```ruby
-```
-```ruby
+friends = ['Sarah', 'John', 'Hannah', 'Dave']
+
+friends.each { |friend| puts "hello #{friend}"}
+
+#or
+
+for friend in friends
+  puts "Hello, #{friend}"
+end
+
 ```
