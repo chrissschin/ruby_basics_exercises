@@ -163,11 +163,82 @@ end
 
 ```
 
-```ruby
-```
+##Only Even
+###### Using next, modify the code below so that it only prints even numbers.
 
 ```ruby
+
+number = 0
+
+until number == 10
+  number += 1
+  if number.even?
+    puts number
+  end
+end
+
 ```
 
+##First to Five
+######The following code increments number_a and number_b by either 0 or 1. loop is used so that the variables can be incremented more than once, however, break stops the loop after the first iteration. Use next to modify the code so that the loop iterates until either number_a or number_b equals 5. Print "5 was reached!" before breaking out of the loop.
+
 ```ruby
+
+number_a = 0
+number_b = 0
+
+# loop do
+#   number_a += rand(2)
+#   puts "a = #{number_a}"
+#   number_b += rand(2)
+#   puts "b = #{number_b}"
+  
+#   break if number_b == 5 || number_b == 5
+# end
+
+# loop do
+#   number_a += rand(2)
+#   number_b += rand(2)
+#   next unless number_a == 5 || number_b == 5
+
+#   puts '5 was reached!'
+#   break
+# end
+
+loop do
+  number_a += rand(2)
+  puts "a = #{number_a}"
+  number_b += rand(2)
+  puts "b = #{number_b}"
+  
+  next unless [number_b, number_a].include? 5
+  
+  puts "you got to 5!"
+  break
+  
+end
+
+
+```
+
+##Greeting
+
+#######Given the code below, use a while loop to print "Hello!" twice.
+
+```ruby
+
+# run greeting method as long as the of greetings is above zero
+# so after a greet, we subtract from the number until the while block is falsey.
+
+def greeting
+  puts 'Hello!'
+end
+
+number_of_greetings = 2
+
+while number_of_greetings > 0
+  greeting
+  number_of_greetings -= 1 
+end
+
 ```
