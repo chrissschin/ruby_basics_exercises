@@ -198,3 +198,68 @@ puts "#{num_1} + #{num_2} = #{result}"
 
 
 ```
+
+## Multiply the Sum
+####### Write the following methods so that each output is true.
+```ruby
+
+def add(num1,num2)
+  num1 + num2
+end
+
+def multiply(num1, num2)
+  num1 * num2
+end
+
+
+puts add(2, 2)
+puts add(5, 4)
+puts multiply(add(2, 2), add(5, 4)) 
+
+
+
+```
+
+##Random Sentence
+###### makes a random sentence
+```ruby 
+
+#using sample to grab a random index form the array.
+#using methods as a way to pass in any array instead of setting it like this
+# name = names.sample
+names = ['Dave', 'Sally', 'George', 'Jessica']
+activities = ['walking', 'running', 'cycling']
+
+def name(names)
+  names.sample
+end  
+
+def activity(activities)
+  activities.sample
+end
+
+
+def sentence(name, activity)
+  "#{name} went #{activity} today!"
+end
+
+puts sentence(name(names), activity(activities))
+```
+
+## Print Me (Part 1)
+###### Write a method named print_me that prints "I'm printing within the method!" when invoked.
+
+```ruby
+
+def print_me
+  puts "I'm printing within the method"
+end
+
+print_me
+
+# if you have puts within the method it will return nil because puts is outputting one thing and returning another, which will be nil because we aren't returning anything.
+
+# if no puts, then it return the string.
+
+```
+
