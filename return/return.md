@@ -50,9 +50,39 @@ puts count_sheep
 
 
 ## Counting Sheep (Part 2)
-
+###### whats it print?
 ```ruby 
 
+def count_sheep
+  5.times do |sheep|
+    puts sheep
+  end
+  10
+end
+
+puts count_sheep
+
+# 0-4 return 10 since its last line. 5 still gets returned but since 10 is last then it returns that instead.
+
+```
 
 
+## Counting Sheep (Part 3)
+###### whats it print?
+```ruby 
+
+def count_sheep
+  5.times do |sheep|
+    puts sheep
+    if sheep >= 2
+      return
+    end
+  end
+end
+
+p count_sheep
+
+
+# 0-2 then returns nil because there is no value provided. i can do return 5 and itll be 0 1 2 5. using 5 as the return value.
+# 
 ```
