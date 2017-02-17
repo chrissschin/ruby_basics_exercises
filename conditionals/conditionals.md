@@ -84,9 +84,42 @@ end
 ```
 
 
+## Stoplight (Part 3)
+
 ```ruby
+# turn into five lines
 
+stoplight = ['green', 'yellow', 'red'].sample
 
+case stoplight
+when 'green'
+  puts 'Go!'
+when 'yellow'
+  puts 'Slow down!'
+else
+  puts 'Stop!'
+end
+
+# do this only when it can be done in one line
+
+case stoplight
+when 'green'  then puts 'go!'
+when 'yellow' then puts 'slow!'
+else               puts 'stop!'
+end
+
+# do if it has more statements put on multiple lines
+case stoplight
+when 'green'
+  puts 'Go!'
+  accelerate
+when 'yellow'
+  puts 'Slow down!'
+  decelerate
+else
+  puts 'Stop!'
+  stop
+end
 
 ```
 
